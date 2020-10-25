@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Stopwatch - Clock - Pomodoro</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='stopwatch.css'>
+
+</head>
+<body>
+        <section id = "stopwatch" class="main">
+            <div class="inner-wrapper">
+                <h4> stopwatch </h4>
+                <span id="stopwatch-minute">00 </span>
+                <span>:</span>
+                <span id="stopwatch-second">00</span>
+                <span>:</span>
+                <span id="stopwatch-tens">00</span>
+                <section>
+                    <button id="stopwatch-start">start</button>
+                    <button id="stopwatch-reset">reset</button>
+                    <button id="stopwatch-stop">stop</button>
+                </section> 
+            </div>   
+        </section>
+
+        <section id="clock" class="main">
+            <div class="inner-wrapper">
+                <h4>clock</h4>
+                <p>
+                    <span id="clock-hour">08</span>
+                    <span>:</span>
+                    <span id="clock-minute">10</span>
+                    <span>:</span>
+                    <span id="clock-second">00</span>
+                </p>
+            </div>    
+        </section>
+
+        <section id="pomodoro" class="main">
+            <div class="inner-wrapper">
+                <!-- Audio -->
+                <audio src="./audios/household_clock_digital_alarm_beeping_004.mp3" id="beep" preload="auto" type="audio/mpeg">
+                alarm sound count not be loaded
+                </audio>
+                <audio src= "./audios/zapsplat_technology_radio_static_constant_white_noise_46408.ogg" id ="whitenoise-audio" preload="auto" type="audio/mpeg" loop="loop">
+                    white noise could not be loaded
+                </audio>
+                <audio src= "./audios/Blastwave_FX_RestaurantCrowd_S08AM.54.ogg" id ="restaurant-audio" preload="auto" type="audio/mpeg" loop="loop">
+                    restaurant noise could not be loaded
+                </audio>
+                <audio src= "./audios/zapsplat_nature_rain_approaching_thunderstorm.ogg" id ="rain-audio" preload="auto" type="audio/mpeg" loop="loop">
+                    rain noise could not be loaded
+                </audio>
+                <audio src= "./audios/nature_fire_in_fireplace_spit_rumble_crackle_003.ogg" id ="fireplace-audio" preload="auto" type="audio/mpeg" loop="loop">
+                    fireplace noise could not be loaded
+                </audio>
+
+                <!-- functionalities -->
+                <h4>pomodoro timer</h4>
+                <section id="controls">
+                    <button id="pomodoro-time">pomodoro</button>
+                    <button id="short-break">short break</button>
+                    <button id="long-break">long break</button>
+                    <button id="settings">settings</button>
+                </section>
+
+                <section id="ambient" class="modal">
+                    <section id="modal-popup">
+                        <button id="white-noise" class="noise-type-btn">white noise</button>
+                        <button id="restaurant" class="noise-type-btn">restaurant</button>
+                        <button id="rain" class="noise-type-btn">rain</button>
+                        <button id="fireplace" class="noise-type-btn">fireplace</button>
+                    </section>
+                    <section id="audio-controls" class="slidecontainer">
+                        <input type="range" min="0" max="100" value="50" class="slider" id="whitenoise-volume-slider">
+                    </section>
+                </section>
+
+                <section id="display">
+                    <span id="pomodoro-minute">25</span>
+                    <span>:</span>
+                    <span id="pomodoro-second">00</span>
+                </section>  
+
+                <section>
+                    <button id="pomodoro-start">start</button>
+                    <button id="pomodoro-reset">reset</button>
+                    <button id="pomodoro-stop">stop</button>
+                </section>
+            </div>    
+        </section>
+    
+
+    <script src='stopwatch.js' ></script>
+    <script src="audio.js"></script>
+</body>
+</html>

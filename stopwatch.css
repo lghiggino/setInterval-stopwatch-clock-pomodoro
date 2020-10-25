@@ -1,0 +1,29 @@
+body{
+    box-sizing: border-box;
+}
+
+.inner-wrapper{
+    margin-bottom: 1em;
+    margin-left: 1em;
+    width:96%;
+}
+
+.main{
+    float:left;
+    height: 10%;
+    width: 30%;
+    margin:1%;
+    border: 1px solid black;
+}
+
+h4{
+    margin: 10% auto;
+}
+
+.modal{
+    display: none;
+}
+
+
+
+
